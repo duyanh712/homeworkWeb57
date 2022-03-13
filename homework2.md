@@ -22,6 +22,7 @@ const writeFile = (path, data) => {
    return new Promise((resolve, reject) => {
       fs.writeFile(path, dataInput, {encoding: 'utf-8'}, (err) => {
          if (err) {
+            err = 'lỗi'
             reject(err)
          }
          else {
